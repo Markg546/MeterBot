@@ -18,7 +18,7 @@ async def _ocr(_, msg: Message):
     name_format = f"Photo_{user_id}_{message_id}"
     message = await msg.reply("Asteptati...")
     image = await msg.download(file_name=f"{name_format}.jpg")
-    img = Image.open(image)
+    img = np.asarray(Image.open(image))
     
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # pre-processing starts here
