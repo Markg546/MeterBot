@@ -20,13 +20,13 @@ async def _ocr(_, msg: Message):
     image = await msg.download(file_name=f"{name_format}.jpg")
     img = np.asarray(Image.open(image))
     
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # pre-processing starts here
-    gray = cv2.fastNlMeansDenoising(gray, None, 10, 7, 21)
-    gray = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
-    gray = cv2.erode(gray, np.ones((3,2),np.uint8), iterations = 1)
+    img = cv2.fastNlMeansDenoising(img, None, 10, 7, 21)
+    img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
+    img = cv2.erode(img, np.ones((3,2),np.uint8), iterations = 1)
     
-    text = pytesseract.image_to_string(gray, config=custom_config)
+    text = pytesseract.image_to_string(img, config=custom_config)
     
     text = text[:-1]
     try:
