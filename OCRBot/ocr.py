@@ -16,7 +16,7 @@ async def _ocr(_, msg: Message):
     message = await msg.reply("Asteptati...")
     image = await msg.download(file_name=f"{name_format}.jpg")
     img = Image.open(image)
-    text = pytesseract.image_to_string(img)
+    text = pytesseract.image_to_string(img, config='outputbase digits')
     text = text[:-1]
     try:
         await msg.reply(text, quote=True, disable_web_page_preview=True)
