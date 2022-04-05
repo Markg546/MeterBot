@@ -20,11 +20,11 @@ async def _ocr(_, msg: Message):
     
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # pre-processing starts here
-    img = cv2.fastNlMeansDenoising(img, None, 10, 7, 21)
-    img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
-    img = cv2.erode(img, np.ones((3,2),np.uint8), iterations = 1)
+    #img = cv2.fastNlMeansDenoising(img, None, 10, 7, 21)
+    #img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
+    #img = cv2.erode(img, np.ones((3,2),np.uint8), iterations = 1)
     
-    text = pytesseract.image_to_string(img, lang='eng', config='--psm 7')
+    text = pytesseract.image_to_string(img, lang='eng')#, config='--psm 7')
     
     text = text[:-1]
     try:
