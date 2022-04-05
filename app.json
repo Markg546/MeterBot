@@ -44,5 +44,5 @@
       "value": "/app/.apt/usr/share/tesseract-ocr/4.00/tessdata"
     }
   },
-  "stack": "heroku-18"
+  "stack": "heroku-20"
 }
