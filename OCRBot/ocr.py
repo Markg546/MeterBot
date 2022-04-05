@@ -9,8 +9,6 @@ import numpy as np
 
 # pytesseract.pytesseract.tesseract_cmd = r""
 
-custom_config = r'-c tessedit_char_whitelist=0123456789- --psm 7'
-
 @Client.on_message(filters.private & filters.incoming & filters.photo)
 async def _ocr(_, msg: Message):
     user_id = msg.from_user.id
@@ -26,7 +24,7 @@ async def _ocr(_, msg: Message):
     img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
     img = cv2.erode(img, np.ones((3,2),np.uint8), iterations = 1)
     
-    text = pytesseract.image_to_string(img, config=custom_config)
+    text = pytesseract.image_to_string(img, lang='eng', config='--psm 13 --oem 3 -c tessedit_char_whitelist=0123456789')
     
     text = text[:-1]
     try:
