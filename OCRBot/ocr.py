@@ -9,7 +9,7 @@ import numpy as np
 
 # pytesseract.pytesseract.tesseract_cmd = r""
 
-custom_config = r'-c tessedit_char_whitelist=0123456789- --psm 12'
+custom_config = r'-c tessedit_char_whitelist=0123456789- --psm 7'
 
 @Client.on_message(filters.private & filters.incoming & filters.photo)
 async def _ocr(_, msg: Message):
