@@ -33,7 +33,7 @@ async def _callbacks(bot, callback_query: CallbackQuery):
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="**Ajutor**\n" + Data.HELP,
+            text=Data.HELP,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
