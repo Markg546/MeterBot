@@ -37,3 +37,12 @@ async def _callbacks(bot, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
+    elif callback_query.data.lower() == "date":
+        chat_id = callback_query.from_user.id
+        message_id = callback_query.message.message_id
+        await bot.send_photo(
+            msg.chat.id,
+            "https://i.imgur.com/BQBTP7d.png",
+            caption="00637",
+            reply_markup=InlineKeyboardMarkup(Data.home_buttons)
+        )   
