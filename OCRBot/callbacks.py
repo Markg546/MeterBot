@@ -45,3 +45,4 @@ async def _callbacks(bot, callback_query: CallbackQuery):
             caption="00637",
             #reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
+        await message.delete()

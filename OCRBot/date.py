@@ -12,3 +12,5 @@ async def _help(bot, msg):
         caption="00637",
         #reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
+    await message.delete()
+
