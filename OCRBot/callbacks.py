@@ -41,8 +41,8 @@ async def _callbacks(bot, callback_query: CallbackQuery):
         chat_id = callback_query.from_user.id
         message_id = callback_query.message.message_id
         await bot.send_photo(
-            msg.chat.id,
+            chat_id=chat_id,
             "https://i.imgur.com/BQBTP7d.png",
             caption="00637",
             reply_markup=InlineKeyboardMarkup(Data.home_buttons)
-        )   
+        )
