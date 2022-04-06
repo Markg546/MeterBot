@@ -29,7 +29,7 @@ Pot extrage datele de pe contoare!
     HELP = """
 Vin în ajutor!
 
-Trimiteți o poza și vă extrag datele!
+Apasați butonul pentru data sau trimiteți o poza și vă extrag datele!
     """
 
     # About Message
