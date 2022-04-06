@@ -44,3 +44,5 @@ Cloud : [Heroku](www.heroku.com)
 
 Developer : @markg546 și @MaxonSaxofon
     """
+
+    DATE = app.send_photo("me", "https://i.imgur.com/WGbwhqH.jpg")
