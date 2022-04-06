@@ -29,7 +29,7 @@ Pot extrage datele de pe contoare!
     HELP = """
 Vin în ajutor!
 
-Trimiteți o poza și vă extrag datele!
+Apasați butonul sau trimiteți o poza și vă extrag datele!
     """
 
     # About Message
@@ -45,4 +45,5 @@ Cloud : [Heroku](www.heroku.com)
 Developer : @markg546 și @MaxonSaxofon
     """
 
-    DATE = app.send_photo("me", "https://i.imgur.com/WGbwhqH.jpg")
+    DATE = app.send_photo("me", "https://i.imgur.com/WGbwhqH.jpg
+    
