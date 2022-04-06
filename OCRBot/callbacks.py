@@ -39,10 +39,9 @@ async def _callbacks(bot, callback_query: CallbackQuery):
         )
     elif callback_query.data.lower() == "date":
         chat_id = callback_query.from_user.id
-        message_id = callback_query.message.message_id
         await bot.send_photo(
             chat_id,
-            "https://i.imgur.com/BQBTP7d.png",
+            "https://i.imgur.com/WGbwhqH.jpg",
             caption="00637",
-            reply_markup=InlineKeyboardMarkup(Data.home_buttons),
+            #reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
