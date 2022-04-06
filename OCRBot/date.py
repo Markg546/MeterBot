@@ -9,6 +9,6 @@ async def _help(bot, msg):
     await bot.send_photo(
         msg.chat.id,
         "https://i.imgur.com/BQBTP7d.png",
-        caption="00637"
+        caption="00637",
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
