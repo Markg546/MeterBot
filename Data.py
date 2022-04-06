@@ -5,11 +5,9 @@ class Data:
     # Start Message
     START = """
 Hey {}
-
-Welcome to {}
+Vă folosiți de {}
 
 Pot extrage datele de pe contoare!
-
 """
 
     # Home Button
@@ -29,7 +27,7 @@ Pot extrage datele de pe contoare!
     HELP = """
 Vin în ajutor!
 
-Apasați butonul sau trimiteți o poza și vă extrag datele!
+Apasați butonul "Date contor" sau trimiteți o poza și vă extrag datele!
     """
 
     # About Message
@@ -44,6 +42,3 @@ Cloud : [Heroku](www.heroku.com)
 
 Developer : @markg546 și @MaxonSaxofon
     """
-
-    DATE = app.send_photo("me", "https://i.imgur.com/WGbwhqH.jpg)
-    
