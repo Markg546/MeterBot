@@ -19,6 +19,7 @@ Pot extrage datele de pe contoare!
     # Rest Buttons
     buttons = [
         [
+            InlineKeyboardButton("Date contor", callback_data="date")
             InlineKeyboardButton("Cum se folosește?", callback_data="help"),
             InlineKeyboardButton("Despre", callback_data="about")
         ],
