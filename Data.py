@@ -5,8 +5,7 @@ class Data:
     # Start Message
     START = """
 Hey {}
-
-Welcome to {}
+Vă folosiți de {}
 
 Pot extrage datele de pe contoare!
 
