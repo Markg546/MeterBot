@@ -17,9 +17,6 @@ Pot extrage datele de pe contoare!
     # Rest Buttons
     buttons = [
         [
-            InlineKeyboardButton("Date contor", callback_data="date")
-        ],
-        [
             InlineKeyboardButton("Cum se folosește?", callback_data="help"),
             InlineKeyboardButton("Despre", callback_data="about")
         ],
@@ -29,7 +26,7 @@ Pot extrage datele de pe contoare!
     HELP = """
 Vin în ajutor!
 
-Apasați butonul "Date contor" sau trimiteți o poza și vă extrag datele!
+Trimiteți o poza și vă extrag Textul!
     """
 
     # About Message
@@ -42,5 +39,5 @@ Language : [Python](www.python.org)
 AI : [Tesseract](https://github.com/tesseract-ocr/tesseract)
 Cloud : [Heroku](www.heroku.com)
 
-Developer : @markg546 și @MaxonSaxofon
+Developer : @markg546
     """
